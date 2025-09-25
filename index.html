@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="container">
+        <div id="innerdiv">
+         <div id="header">
+          
+          <a href=""> <button id="jisajili">jisajili</button></a>
+          <a href=""> <button id="signup">signup</button></a> 
+            
+          <div >
+          <div id="menu-icon" onclick="openMenu()" >    &#9776;  </div></div>
+       </div>
+           
+        
+
+          <div id="sidebar">
+<a href="javascript:void(0)" id="close-btn" onclick="closeMenu()">×</a>
+<a href="">Home</a>
+<a href="">add new member</a>
+<a href="">report</a>
+<a href="">Admin</a>
+<a href="">profile</a>
+<a href="">setting</a>
+<a href=""></a>
+<a href="">contact</a>
+          </div>
+<h1 style="padding-top: 50px;"></h1>
+<div id="search">
+<input type="serch" placeholder="search member here" >
+  
+</div>
+  
+   
+
+   <div id="content">
+  <h1 id="typeWriter"></h1>
+   
+   
+
+
+     you will get a full  of infomation of our member time their n <br>
+
+
+
+     <script>
+
+      const text= "magic web system";
+       const speed=200;
+       let i=0;
+
+function typeWriter(){
+   
+
+   if(i<text.length){
+
+    document.getElementById("typeWriter").innerHTML+=text.charAt(i);
+    i++;
+
+    setTimeout(typeWriter,speed)
+   }
+}
+ window.onload=typeWriter;
+
+ document.getElementById('typeWriter').style.color=red;
+
+     </script>
+   </div>
+   </div>
+   </div>
+
+   <script>
+// function ya kufungua side bar
+ function openMenu(){
+  document.getElementById('sidebar').style.width="250px";
+  document.getElementById('menu-icon').style.display="none";
+  document.getElmentById('sidebar').style.color="black";
+  
+ }
+ //function ya kufunga sidebar
+
+ function closeMenu(){
+  document.getElementById('sidebar').style.width="0";
+  document.getElementById("menu-icon").style.display="block";
+ }
+
+
+   </script>
+   
+
+<div id="endpage">
+   <div>
+    <footer id="footer">
+  <div class="footer-section" id="left-footer" style=" margin-left: 200px;">
+    <h3>Left Side</h3>
+    <p><a href="">view group in whatsapp</a></p>
+  </div>
+  <div class="footer-section" id="center-footer" style="">
+    <h3>Center Side</h3>
+    <p><a href="">messabge admin in whatsapp</a></p>
+  </div>
+  <div class="footer-section" id="right-footer" style="column-gap: 1fr; margin-right:200px;">
+    <h3>Right Side</h3>
+    <p><a href="">view member</a></p>  
+  </div> 
+
+
+ </footer>
+  
+
+
+    </footer>
+    </div>
+</body>
+</html>
